@@ -92,6 +92,53 @@ Let me know if you still have concerns.
 
 ---
 
+### Sample 5
+**Context:** Negotiation  
+**Tone:** Polite, direct
+
+```
+I agree with @person.
+
+My thoughts:
+
+All actions need to be project specific. If a customer wants to publish Agent Network B, we should launch the publish UI for Agent Network B. If this isn't happening, we should fix it asap. 
+We shouldn't block the user from opening anything. We can't assume what the user wants to do and what context they have open. Instead:
+We should allow them to launch publish UI/project properties of project A and publish UI/project properties of project B simultaneously.  WHY? We can't assume which context the user wants open.
+We should ensure that we are closing tabs once a given action is finished (i.e. after publish, after deploy).
+```
+
+---
+
+### Sample 6
+**Context:** Negotiation  
+**Tone:** Polite, direct
+
+```
+Just taking a step back, here.
+
+The problem that we should solve is what is the best experience for our customers. Yes, many of them are from Studio, but Anypoint Code Builder is also driving new logos for customers who have never seen Studio.
+
+If Studio has a great existing pattern, then yes, let's take inspiration from it or reuse it. We're doing this in other areas and for the right reasons. However, if there are better patterns for us to lean on, let's use those pattern.
+
+-----
+So, applying that here... what problems are we trying to solve with Custom Metadata:
+Easy to find where to set custom metadata
+Easy to find where to view existing metadata
+Customers DONT have to go to docs to learn that we support custom metadata. 
+
+IMO, the UX from @Person does a great job at being a central metadata management pane where you can do all three.
+
+Why?
+When you create metadata in Studio from a node, it's in relation to the input or output payload/attributes/variables. This custom metadata experience should be in context of where the metadata is propagating. 
+I think it's actually more arduous to have one tab for editing metadata, and another place where you can see how that metadata shows up for that node. This will mean constant back and forth. 
+
+So what is the issue? I still think that the Input/Output label is contributing to a lot of confusion.
+
+If we updated the label of that tab and other actions, we have a consolidated view of all metadata actions for the user AND it's clear where you go to manage/update/view your  metadata.
+```
+
+---
+
 *Add more samples below. Include variety:*
 - *Requests (asking for help, feedback, approval)*
 - *Updates (status, progress)*
