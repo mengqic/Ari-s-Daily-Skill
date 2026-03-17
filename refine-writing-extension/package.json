@@ -1,0 +1,80 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "refine-writing-extension",
+  "title": "Refine Writing",
+  "description": "Refine your writing with Gemini CLI. Select text, press a hotkey, get polished output instantly.",
+  "icon": "icon.png",
+  "author": "ari",
+  "categories": ["Productivity", "Communication"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "refine-with-options",
+      "title": "Refine Writing",
+      "subtitle": "Refine Writing",
+      "description": "Pick text from selection or clipboard history, choose tone and context, then refine with Gemini.",
+      "mode": "view"
+    },
+    {
+      "name": "switch-skill",
+      "title": "Switch Skill Source",
+      "subtitle": "Refine Writing",
+      "description": "Choose which skill folder drives the rewriting logic.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "defaultTone",
+      "title": "Default Tone",
+      "description": "The default tone to use when refining text.",
+      "type": "dropdown",
+      "required": false,
+      "default": "professional",
+      "data": [
+        { "title": "Professional (warm)", "value": "professional" },
+        { "title": "Casual", "value": "casual" },
+        { "title": "Formal", "value": "formal" },
+        { "title": "Friendly", "value": "friendly" },
+        { "title": "Concise (BLUF)", "value": "concise" },
+        { "title": "Empathetic", "value": "empathetic" },
+        { "title": "Softened", "value": "softened" }
+      ]
+    },
+    {
+      "name": "geminiPath",
+      "title": "Gemini CLI Path",
+      "description": "Path to the gemini CLI binary. Leave empty to use the default.",
+      "type": "textfield",
+      "required": false,
+      "default": ""
+    },
+    {
+      "name": "skillPath",
+      "title": "Default Skill Folder",
+      "description": "Path to the default skill folder containing SKILL.md. Can be overridden at runtime via Switch Skill Source.",
+      "type": "textfield",
+      "required": false,
+      "default": "/Users/huayumochi/skills/Ari-s-Daily-Skill/rewrite-message"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.1",
+    "@raycast/utils": "^2.2.2"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
