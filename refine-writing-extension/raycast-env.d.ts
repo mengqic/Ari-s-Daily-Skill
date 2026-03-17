@@ -12,8 +12,12 @@ type ExtensionPreferences = {
   "defaultTone": "professional" | "casual" | "formal" | "friendly" | "concise" | "empathetic" | "softened",
   /** Gemini CLI Path - Path to the gemini CLI binary. Leave empty to use the default. */
   "geminiPath": string,
-  /** Default Skill Folder - Path to the default skill folder containing SKILL.md. Can be overridden at runtime via Switch Skill Source. */
-  "skillPath": string
+  /** Default Skill Folder - Path to the default source skill folder containing SKILL.md. */
+  "skillPath": string,
+  /** Skills Source Root - Directory to scan for source skill folders (each must contain SKILL.md). */
+  "skillSourceRoot": string,
+  /** Gemini CLI Skills Root - Directory to scan for Gemini CLI skill folders (destinations). */
+  "geminiSkillRoot": string
 }
 
 /** Preferences accessible in all the extension's commands */

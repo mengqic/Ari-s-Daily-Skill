@@ -17,9 +17,9 @@
     },
     {
       "name": "switch-skill",
-      "title": "Switch Skill Source",
+      "title": "Sync Skill to Gemini CLI",
       "subtitle": "Refine Writing",
-      "description": "Choose which skill folder drives the rewriting logic.",
+      "description": "Pick a source skill folder and sync it to your Gemini CLI skill.",
       "mode": "view"
     }
   ],
@@ -52,10 +52,26 @@
     {
       "name": "skillPath",
       "title": "Default Skill Folder",
-      "description": "Path to the default skill folder containing SKILL.md. Can be overridden at runtime via Switch Skill Source.",
+      "description": "Path to the default source skill folder containing SKILL.md.",
       "type": "textfield",
       "required": false,
       "default": "/Users/huayumochi/skills/Ari-s-Daily-Skill/rewrite-message"
+    },
+    {
+      "name": "skillSourceRoot",
+      "title": "Skills Source Root",
+      "description": "Directory to scan for source skill folders (each must contain SKILL.md).",
+      "type": "textfield",
+      "required": false,
+      "default": "/Users/huayumochi/skills/Ari-s-Daily-Skill"
+    },
+    {
+      "name": "geminiSkillRoot",
+      "title": "Gemini CLI Skills Root",
+      "description": "Directory to scan for Gemini CLI skill folders (destinations).",
+      "type": "textfield",
+      "required": false,
+      "default": "/Users/huayumochi"
     }
   ],
   "dependencies": {
